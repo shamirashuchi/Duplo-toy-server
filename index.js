@@ -11,11 +11,6 @@ const Toys = require('./data/toys.json');
 app.use(cors());
 app.use(express.json())
 
-//ToyWorld
-//6e6rDvfhw3j8IXcv
-
-
-
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.g2hlfdf.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -34,7 +29,23 @@ async function run() {
 
 const toyCollection = client.db('toyDB').collection('toy');
 
-app.post('/toy', async(req,res)=>{
+app.get('/toy', async(req,res) =>{
+    const cursor = toyCollection.find();
+    const result = await cursor.toArray();
+    res.send(result);
+})
+
+app.get('/toy', async(req,res) => {
+    console.log(req.query.email);
+    let query = {};
+    if(req.query?.email){
+        query = {email: req.query.email}
+    }
+    const result = await toyCollection.find(query).toArray();
+    res.send(result);
+})
+
+app.post('/toy', async(req,res) => {
     const newtoy = req.body;
     console.log(newtoy);
     const result = await toyCollection.insertOne(newtoy);
