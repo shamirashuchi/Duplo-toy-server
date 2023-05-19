@@ -1,0 +1,60 @@
+[
+    {
+      "name": "Math Toys",
+      "toys": [
+        {
+          "id": 1,
+          "name": "Math shark",
+          "price": 500,
+          "rating": 4.5,
+          "imageUrl": "https://i.ibb.co/0YBzhzt/Mathshark.webp"
+        },
+        {
+          "id": 2,
+          "name": "Math whiz",
+          "price": 550,
+          "rating": 4.0,
+          "imageUrl": "https://i.ibb.co/k2PpR36/Mathwhiz.webp"
+        }
+      ]
+    },
+    {
+      "name": "Language Toys",
+      "toys": [
+        {
+          "id": 3,
+          "name": "Montessori",
+          "price": 600,
+          "rating": 3.5,
+          "imageUrl": "https://i.ibb.co/3z6v5YK/Montessori.webp"
+        },
+        {
+          "id": 4,
+          "name": "Read to me tot tower",
+          "price": 575,
+          "rating": 4.2,
+          "imageUrl": "https://i.ibb.co/CwK5Lds/Read-to-me.webp"
+        }
+      ]
+    },
+    {
+      "name": "Engineering Toys",
+      "toys": [
+        {
+          "id": 5,
+          "name": "Lego chain reaction",
+          "price": 700,
+          "rating": 4.7,
+          "imageUrl": "https://i.ibb.co/gy9CQXn/Lego-chain-reaction.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Magna Tiles Builder",
+          "price": 750,
+          "rating": 4.3,
+          "imageUrl": "https://i.ibb.co/ZN4cqL1/Magna-Tiles-Builder.jpg"
+        }
+      ]
+    }
+  ]
+  
