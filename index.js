@@ -1,7 +1,7 @@
-const express =require('express');
+const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express();
 const port = process.env.PORT || 2000;
 
@@ -35,7 +35,7 @@ app.get('/toy', async(req,res) =>{
     res.send(result);
 })
 
-app.get('/toy', async(req,res) => {
+app.get('/toyByEmail', async(req,res) =>{
     console.log(req.query.email);
     let query = {};
     if(req.query?.email){
@@ -45,11 +45,48 @@ app.get('/toy', async(req,res) => {
     res.send(result);
 })
 
+app.get('/toy/:id', async(req,res) => {
+  const id = req.params.id;
+  const query = {_id: new ObjectId(id)}
+  const result = await toyCollection.findOne(query);
+  res.send(result);
+})
+
 app.post('/toy', async(req,res) => {
     const newtoy = req.body;
     console.log(newtoy);
     const result = await toyCollection.insertOne(newtoy);
     res.send(result);
+})
+
+
+app.put('/toy/:id', async(req,res)=>{
+  const id = req.params.id;
+  const filter = {_id: new ObjectId(id)}
+  const options = {upsert:true};
+  const updatedToy = req.body; 
+  const toy = {
+    $set: {
+      photo:updatedToy.photo,
+      toyname:updatedToy.toyname,
+      sellername:updatedToy.sellername,
+      email:updatedToy.email,
+      category:updatedToy.category,
+      price:updatedToy.price,
+      rating:updatedToy.rating,
+      quantity:updatedToy.quantity,
+      details:updatedToy.details
+    }
+  }
+  const result = await toyCollection.updateOne(filter,toy,options);
+  res.send(result);
+})
+
+app.delete('/toy/:id', async(req,res) =>{
+  const id = req.params.id;
+  const query = {_id: new ObjectId(id)}
+  const result = await toyCollection.deleteOne(query);
+  res.send(result);
 })
 
 
