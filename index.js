@@ -35,15 +35,23 @@ app.get('/toy', async(req,res) =>{
     res.send(result);
 })
 
-app.get('/toyByEmail', async(req,res) =>{
-    console.log(req.query.email);
-    let query = {};
-    if(req.query?.email){
-        query = {email: req.query.email}
-    }
-    const result = await toyCollection.find(query).toArray();
-    res.send(result);
-})
+app.get('/toyByEmail', async (req, res) => {
+  // console.log(req.query.email);
+  let query = {};
+  if (req.query?.email) {
+    query = { email: req.query.email };
+  }
+
+  const sort = req.query?.sort === 'asc' ? 1 : -1; // Determine the sort order based on the 'sort' query parameter
+
+  const result = await toyCollection
+    .find(query)
+    .sort({ price: sort }) // Sort based on the 'price' field (modify the field as per your requirement)
+    .toArray();
+
+  res.send(result);
+});
+
 
 app.get('/toy/:id', async(req,res) => {
   const id = req.params.id;
