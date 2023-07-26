@@ -1,60 +1,101 @@
 [
-    {
-      "name": "Math Toys",
-      "toys": [
-        {
-          "id": 1,
-          "name": "Math shark",
-          "price": 400,
-          "rating": 4.5,
-          "imageUrl": "https://i.ibb.co/0YBzhzt/Mathshark.webp"
-        },
-        {
-          "id": 2,
-          "name": "Math whiz",
-          "price": 550,
-          "rating": 4.0,
-          "imageUrl": "https://i.ibb.co/k2PpR36/Mathwhiz.webp"
-        }
-      ]
-    },
-    {
-      "name": "Language Toys",
-      "toys": [
-        {
-          "id": 3,
-          "name": "Montessori",
-          "price": 600,
-          "rating": 3.5,
-          "imageUrl": "https://i.ibb.co/3z6v5YK/Montessori.webp"
-        },
-        {
-          "id": 4,
-          "name": "Read to me tot tower",
-          "price": 575,
-          "rating": 4.2,
-          "imageUrl": "https://i.ibb.co/CwK5Lds/Read-to-me.webp"
-        }
-      ]
-    },
-    {
-      "name": "Engineering Toys",
-      "toys": [
-        {
-          "id": 5,
-          "name": "Lego chain reaction",
-          "price": 700,
-          "rating": 4.7,
-          "imageUrl": "https://i.ibb.co/gy9CQXn/Lego-chain-reaction.jpg"
-        },
-        {
-          "id": 6,
-          "name": "Magna Tiles Builder",
-          "price": 750,
-          "rating": 4.3,
-          "imageUrl": "https://i.ibb.co/ZN4cqL1/Magna-Tiles-Builder.jpg"
-        }
-      ]
-    }
-  ]
-  
+  {
+    "name": "Math Toys",
+    "toys": [
+      {
+        "id": 1,
+        "name": "Math shark",
+        "price": 400,
+        "rating": 4.5,
+        "imageUrl": "https://i.ibb.co/0YBzhzt/Mathshark.webp"
+      },
+      {
+        "id": 2,
+        "name": "Math whiz",
+        "price": 550,
+        "rating": 4.0,
+        "imageUrl": "https://i.ibb.co/k2PpR36/Mathwhiz.webp"
+      },
+      {
+        "id": 3,
+        "name": "Mathwatters",
+        "price": 400,
+        "rating": 4.5,
+        "imageUrl": "https://m.media-amazon.com/images/I/91kQPyYnjjL._AC_UL600_FMwebp_QL65_.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Wooden Puzzle Counting Toys",
+        "price": 600,
+        "rating": 4.7,
+        "imageUrl": "https://www.mother.ly/wp-content/uploads/legacy-images/math-toys-for-preschoolers-0.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Language Toys",
+    "toys": [
+      {
+        "id": 5,
+        "name": "Montessori",
+        "price": 600,
+        "rating": 3.5,
+        "imageUrl": "https://i.ibb.co/3z6v5YK/Montessori.webp"
+      },
+      {
+        "id": 6,
+        "name": "Read to me tot tower",
+        "price": 575,
+        "rating": 4.2,
+        "imageUrl": "https://i.ibb.co/CwK5Lds/Read-to-me.webp"
+      },
+      {
+        "id": 7,
+        "name": "Seek-A-Boo Game",
+        "price": 700,
+        "rating": 4.1,
+        "imageUrl": "https://m.media-amazon.com/images/I/51N91hVT1AL._SL250_.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Indoor Scavenger Hunt Cards",
+        "price": 700,
+        "rating": 4.1,
+        "imageUrl": "https://m.media-amazon.com/images/I/51JxArl2Y2L._SL250_.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Engineering Toys",
+    "toys": [
+      {
+        "id": 9,
+        "name": "Lego chain reaction",
+        "price": 700,
+        "rating": 4.7,
+        "imageUrl": "https://i.ibb.co/gy9CQXn/Lego-chain-reaction.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Magna Tiles Builder",
+        "price": 750,
+        "rating": 4.3,
+        "imageUrl": "https://i.ibb.co/ZN4cqL1/Magna-Tiles-Builder.jpg"
+      },
+      {
+        "id": 11,
+        "name": "Sassy Stacks of Circles Stacking Ring STEM Learning Toy",
+        "price": 800,
+        "rating": 4.9,
+        "imageUrl": "https://m.media-amazon.com/images/I/71956HBT1eS._AC_UL480_QL65_.jpg"
+      },
+      {
+        "id": 12,
+        "name": "20Pcs Farm Animals Toys Montessori Counting, Matching & Sorting Fine Motor Games",
+        "price": 700,
+        "rating": 4.7,
+        "imageUrl": "https://m.media-amazon.com/images/I/81bPbY8LeHL._AC_UL480_QL65_.jpg"
+      }
+    ]
+  }
+]
